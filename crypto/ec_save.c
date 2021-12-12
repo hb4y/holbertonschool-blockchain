@@ -15,7 +15,7 @@ int ec_save(EC_KEY *key, char const *folder)
 		return (0);
 
 	mkdir(folder, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
-	sprintf(c_dir, "%s/%s", folder, "key.pem");
+	sprintf(c_dir, "%s/%s", folder, PRI_FILENAME);
 	descriptor = fopen(c_dir, "w");
 	if (!descriptor)
 		return (0);
@@ -25,7 +25,7 @@ int ec_save(EC_KEY *key, char const *folder)
 		return (0);
 	}
 	fclose(descriptor);
-	sprintf(c_dir, "%s/%s", folder, "key_pub.pem");
+	sprintf(c_dir, "%s/%s", folder, PUB_FILENAME);
 	descriptor = fopen(c_dir, "w");
 	if (!descriptor)
 	{
