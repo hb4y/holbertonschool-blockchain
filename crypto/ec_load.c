@@ -17,9 +17,9 @@ EC_KEY *ec_load(char const *folder)
 	sprintf(c_dir, "%s/%s", folder, PUB_FILENAME);
 	descriptor = fopen(c_dir, "r");
 	if (!descriptor)
-    {
+	{
 		return (NULL);
-    }
+	}
 	if (!PEM_read_EC_PUBKEY(descriptor, &k, NULL, NULL))
 	{
 		fclose(descriptor);
