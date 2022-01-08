@@ -1,5 +1,5 @@
-#ifndef blockchain
-#define blockchain
+#ifndef sdfg
+#define sdfg
 
 #include <openssl/sha.h>
 #include <openssl/bio.h>
