@@ -18,6 +18,8 @@
 
 #include <openssl/sha.h>
 
+#define MIN(x, y) ((x) < (y) ? (x) : (y))
+
 /**
  * struct block_info_s - Block info structure
  *
@@ -87,5 +89,7 @@ typedef struct blockchain_s
 
 
 blockchain_t *blockchain_create(void);
+block_t *block_create(block_t const *prev,
+	int8_t const *data, uint32_t data_len);
 
 #endif
