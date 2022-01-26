@@ -1,10 +1,6 @@
 #ifndef BLOCKCHAIN_H
 #define BLOCKCHAIN_H
 
-#include "../../crypto/hblk_crypto.h"
-#include "provided/endianness.h"
-#include "transaction/transaction.h"
-
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -18,6 +14,9 @@
 #include <unistd.h>
 
 #include <openssl/sha.h>
+#include "../../crypto/hblk_crypto.h"
+#include "provided/endianness.h"
+#include "transaction/transaction.h"
 
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 #define BLOCK_GENERATION_INTERVAL 1
